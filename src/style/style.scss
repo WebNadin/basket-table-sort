@@ -3,7 +3,6 @@
 @import "partials/variable";
 @import "partials/fonts";
 @import "partials/base";
-
 .hidden{
   opacity:0;
   pointer-events:none;
@@ -16,29 +15,22 @@ table.sort, table.sort__conclusion{
     height:50px;
     width:50px;
   }
+  td{
+    border:1px solid #ccc;
+    padding:0.3em 1em
+  }
+  thead td{
+    cursor:pointer;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle;
+    &.curcol{  /* заголовок отсортированного столбца */
+      background-color:#999;
+      color:#fff
+    }
+  }
 }
-table.sort th td.curcol:first-child{
-  opacity:0;
-}
-/* ячейки таблицы */
-table.sort td, table.sort__conclusion td{
-  border:1px solid #ccc;
-  padding:0.3em 1em
-}
-/* заголовки таблицы */
-table.sort thead td, table.sort__conclusion thead td{
-  cursor:pointer;
-  cursor:hand;
-  font-weight:bold;
-  text-align:center;
-  vertical-align:middle
-}
-/* заголовок отсортированного столбца */
-table.sort thead td.curcol, table.sort__conclusion thead td.curcol{
-  background-color:#999;
-  color:#fff
-}
+
 @import "partials/media_min_768";
 @import "partials/media_min_1024";
 @import "partials/media_min_1280";
-@import "partials/media_other";

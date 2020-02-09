@@ -66,25 +66,6 @@ p{
 ul, ol{
   margin:1em 0;
 }
-.site-holder{
-  overflow:hidden;
-}
-.wrap{
-  max-width:1410px;
-  margin:0 auto;
-  padding:0 15px;
-}
-.dropdown{
-  &__toggler{
-  }
-  &__content{
-    display:none;
-  }
-  &.opened{
-    > .dropdown__content{
-      display:block;
-    }
-  }
-}
+
 
 

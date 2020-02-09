@@ -1,38 +1,12 @@
 //= ../../node_modules/jquery/dist/jquery.min.js
 
-$(document).ready(function () {
-    $('.nav a').each(function () {
-        var location = window.location.href;
-        var link = this.href;
-        if (location == link) {
-            $(this).addClass('active');
-        }
-    });
-    $(".burger").click(function () {
-        $(".nav_mob").show();
-    });
-
-    $('[data-fancybox]').fancybox({
-        touch: false,
-        hideScrollbar: true
-    });
-});
-
-
-$(document).mouseup(function (e) {
-    var div = $(".nav_mob");
-    if (!div.is(e.target)
-        && div.has(e.target).length === 0) {
-        div.hide();
-    }
-});
 
 /*сортировка таблицы*/
 /*originally written by paul sowden <paul@idontsmoke.co.uk> | http://idontsmoke.co.uk
  modified and localized by alexander shurkayev <alshur@narod.ru> | http://htmlcoder.visions.ru
  */
 
-var img_dir = "/i/"; // папка с картинками
+var img_dir = "/images/"; // папка с картинками
 var sort_case_sensitive = false; // вид сортировки (регистрозависимый или нет)
 
 // ф-ция, определяющая алгоритм сортировки
@@ -123,7 +97,7 @@ function sort(e) {
                 arrow = node.insertBefore(document.createElement("img"), node.firstChild);
                 table.up = 0;
             }
-            arrow.src = img_dir + table.up + ".gif";
+            arrow.src = img_dir + table.up + ".png";
             arrow.alt = "";
         } else {
             if (node.className == "curcol") {
